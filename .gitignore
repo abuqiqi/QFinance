@@ -2,13 +2,7 @@
 __pycache__/
 .pytest_cache/
 *.pyc
-artifacts/models/
-artifacts/kernels/
-data/raw/*.csv
-data/raw/*.jsonl
-data/processed/*.csv
-data/processed/*.json
-results/*.csv
-results/*.json
-results/*.png
 
+# Recomputable quantum-kernel caches
+artifacts/kernels/
+artifacts/quantum_experiments/
