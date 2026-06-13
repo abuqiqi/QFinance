@@ -1,0 +1,163 @@
+{
+  "$defs": {
+    "StockFeatures": {
+      "additionalProperties": false,
+      "properties": {
+        "volatility_20d": {
+          "maximum": 2,
+          "minimum": 0,
+          "title": "Volatility 20D",
+          "type": "number"
+        },
+        "return_5d": {
+          "maximum": 1,
+          "minimum": -1,
+          "title": "Return 5D",
+          "type": "number"
+        },
+        "avg_volume_20d": {
+          "exclusiveMinimum": 0,
+          "title": "Avg Volume 20D",
+          "type": "number"
+        },
+        "turnover_rate": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Turnover Rate",
+          "type": "number"
+        }
+      },
+      "required": [
+        "volatility_20d",
+        "return_5d",
+        "avg_volume_20d",
+        "turnover_rate"
+      ],
+      "title": "StockFeatures",
+      "type": "object"
+    },
+    "TradePlan": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "const": "buy",
+          "title": "Action",
+          "type": "string"
+        },
+        "market": {
+          "anyOf": [
+            {
+              "enum": [
+                "SSE",
+                "SZSE"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Market"
+        },
+        "stock_code": {
+          "pattern": "^\\d{6}$",
+          "title": "Stock Code",
+          "type": "string"
+        },
+        "trade_time": {
+          "minLength": 19,
+          "title": "Trade Time",
+          "type": "string"
+        },
+        "volume_lot": {
+          "exclusiveMinimum": 0,
+          "title": "Volume Lot",
+          "type": "integer"
+        },
+        "estimated_price": {
+          "exclusiveMinimum": 0,
+          "title": "Estimated Price",
+          "type": "number"
+        }
+      },
+      "required": [
+        "action",
+        "stock_code",
+        "trade_time",
+        "volume_lot",
+        "estimated_price"
+      ],
+      "title": "TradePlan",
+      "type": "object"
+    },
+    "UserProfile": {
+      "additionalProperties": false,
+      "properties": {
+        "user_id": {
+          "minLength": 1,
+          "title": "User Id",
+          "type": "string"
+        },
+        "total_asset": {
+          "exclusiveMinimum": 0,
+          "title": "Total Asset",
+          "type": "number"
+        },
+        "cash_available": {
+          "minimum": 0,
+          "title": "Cash Available",
+          "type": "number"
+        },
+        "risk_preference": {
+          "enum": [
+            "conservative",
+            "moderate",
+            "aggressive"
+          ],
+          "title": "Risk Preference",
+          "type": "string"
+        },
+        "current_stock_position_value": {
+          "minimum": 0,
+          "title": "Current Stock Position Value",
+          "type": "number"
+        }
+      },
+      "required": [
+        "user_id",
+        "total_asset",
+        "cash_available",
+        "risk_preference",
+        "current_stock_position_value"
+      ],
+      "title": "UserProfile",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "sample_id": {
+      "minLength": 1,
+      "title": "Sample Id",
+      "type": "string"
+    },
+    "user_profile": {
+      "$ref": "#/$defs/UserProfile"
+    },
+    "trade_plan": {
+      "$ref": "#/$defs/TradePlan"
+    },
+    "stock_features": {
+      "$ref": "#/$defs/StockFeatures"
+    }
+  },
+  "required": [
+    "sample_id",
+    "user_profile",
+    "trade_plan",
+    "stock_features"
+  ],
+  "title": "InvestmentPlanInput",
+  "type": "object"
+}

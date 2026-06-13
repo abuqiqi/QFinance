@@ -1,0 +1,27 @@
+{
+  "signature": "208992ffcae5bc55ec92dc52f3ee4323575039eb1ca3241f8d6a69fd0b21fd16",
+  "config": {
+    "risk": "concentration_risk",
+    "features": [
+      "estimated_amount_ratio",
+      "holding_ratio_after_trade",
+      "current_position_ratio",
+      "risk_preference_code"
+    ],
+    "scale": 0.25,
+    "reps": 2,
+    "entanglement": "linear",
+    "architecture": "risk_specific"
+  },
+  "shape": [
+    180,
+    180
+  ],
+  "elapsed_seconds": 49.11715335585177,
+  "statistics": {
+    "offdiag_mean": 0.10558226513093746,
+    "offdiag_std": 0.16713920014825845,
+    "offdiag_max": 0.9996053697424211,
+    "effective_rank": 36.37807681743794
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "signature": "b49edb4e97d95796b731193a83e757f7b68203542b7f1b1d651a480881cdaf4d",
+  "config": {
+    "risk": "volatility_risk",
+    "features": [
+      "volatility_20d",
+      "abs_return_5d"
+    ],
+    "scale": 0.5,
+    "reps": 2,
+    "entanglement": "linear",
+    "architecture": "risk_specific",
+    "C": 100.0,
+    "class_weight": "balanced",
+    "threshold": 0.08837356238894219,
+    "cv_f1": 0.9666666666666667,
+    "cv_roc_auc": 0.9904319300164024,
+    "kernel_statistics": {
+      "offdiag_mean": 0.4046302000681412,
+      "offdiag_std": 0.29418312963259685,
+      "offdiag_max": 0.9997768712363876,
+      "effective_rank": 6.065533501574822
+    }
+  },
+  "shape": [
+    600,
+    600
+  ],
+  "elapsed_seconds": 230.925389458891,
+  "statistics": {
+    "offdiag_mean": 0.4152187024798705,
+    "offdiag_std": 0.2887350890709934,
+    "offdiag_max": 0.9999985554990711,
+    "effective_rank": 6.096121868587545
+  }
+}

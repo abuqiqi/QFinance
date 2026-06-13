@@ -1,0 +1,25 @@
+{
+  "signature": "fafc27fe7370182918c3e8f0103cd7ea4a43b648d5384d559dd808684e998ce2",
+  "config": {
+    "risk": "volatility_risk",
+    "features": [
+      "volatility_20d",
+      "abs_return_5d"
+    ],
+    "scale": 0.125,
+    "reps": 1,
+    "entanglement": "linear",
+    "architecture": "risk_specific"
+  },
+  "shape": [
+    180,
+    180
+  ],
+  "elapsed_seconds": 11.546098834834993,
+  "statistics": {
+    "offdiag_mean": 0.7039352106548029,
+    "offdiag_std": 0.28323017748368984,
+    "offdiag_max": 0.9999820524576497,
+    "effective_rank": 2.1638636354661966
+  }
+}

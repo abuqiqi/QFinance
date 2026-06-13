@@ -1,0 +1,30 @@
+{
+  "signature": "ea4e066c0a76362d0532b7d305f3fba2fca2a093f0ef12b1d985e1a12fed99a5",
+  "config": {
+    "features": [
+      "estimated_amount_ratio",
+      "holding_ratio_after_trade",
+      "current_position_ratio",
+      "risk_preference_code",
+      "volatility_20d",
+      "abs_return_5d",
+      "turnover_rate",
+      "trade_volume_to_avg_volume"
+    ],
+    "reps": 2,
+    "entanglement": "linear",
+    "scale": 1.0,
+    "architecture": "shared"
+  },
+  "shape": [
+    600,
+    600
+  ],
+  "elapsed_seconds": 1310.4953557210974,
+  "statistics": {
+    "offdiag_mean": 0.0060282997365418995,
+    "offdiag_std": 0.012567372728810228,
+    "offdiag_max": 0.5492788718086888,
+    "effective_rank": 572.0146727290803
+  }
+}

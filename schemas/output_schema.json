@@ -1,0 +1,162 @@
+{
+  "$defs": {
+    "InputSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "stock_code": {
+          "title": "Stock Code",
+          "type": "string"
+        },
+        "action": {
+          "title": "Action",
+          "type": "string"
+        },
+        "volume_lot": {
+          "title": "Volume Lot",
+          "type": "integer"
+        },
+        "volume_share": {
+          "title": "Volume Share",
+          "type": "integer"
+        },
+        "estimated_amount": {
+          "title": "Estimated Amount",
+          "type": "number"
+        }
+      },
+      "required": [
+        "stock_code",
+        "action",
+        "volume_lot",
+        "volume_share",
+        "estimated_amount"
+      ],
+      "title": "InputSummary",
+      "type": "object"
+    },
+    "ModelOutputs": {
+      "additionalProperties": false,
+      "properties": {
+        "classifier_type": {
+          "title": "Classifier Type",
+          "type": "string"
+        },
+        "feature_map": {
+          "title": "Feature Map",
+          "type": "string"
+        },
+        "num_qubits": {
+          "title": "Num Qubits",
+          "type": "integer"
+        },
+        "feature_dimension": {
+          "title": "Feature Dimension",
+          "type": "integer"
+        },
+        "risk_configs": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Risk Configs"
+        }
+      },
+      "required": [
+        "classifier_type",
+        "feature_map",
+        "num_qubits",
+        "feature_dimension"
+      ],
+      "title": "ModelOutputs",
+      "type": "object"
+    },
+    "OverallRisk": {
+      "additionalProperties": false,
+      "properties": {
+        "overall_score": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Overall Score",
+          "type": "number"
+        },
+        "overall_level": {
+          "enum": [
+            "low",
+            "medium",
+            "medium_high",
+            "high"
+          ],
+          "title": "Overall Level",
+          "type": "string"
+        }
+      },
+      "required": [
+        "overall_score",
+        "overall_level"
+      ],
+      "title": "OverallRisk",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "sample_id": {
+      "title": "Sample Id",
+      "type": "string"
+    },
+    "model_version": {
+      "title": "Model Version",
+      "type": "string"
+    },
+    "input_summary": {
+      "$ref": "#/$defs/InputSummary"
+    },
+    "risk_scores": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Risk Scores",
+      "type": "object"
+    },
+    "risk_labels": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Risk Labels",
+      "type": "object"
+    },
+    "overall_risk": {
+      "$ref": "#/$defs/OverallRisk"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    },
+    "model_outputs": {
+      "$ref": "#/$defs/ModelOutputs"
+    }
+  },
+  "required": [
+    "sample_id",
+    "model_version",
+    "input_summary",
+    "risk_scores",
+    "risk_labels",
+    "overall_risk",
+    "confidence",
+    "model_outputs"
+  ],
+  "title": "PredictionOutput",
+  "type": "object"
+}

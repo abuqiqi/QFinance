@@ -1,0 +1,25 @@
+{
+  "signature": "2ea28dd6f69fd8bdb7891fbf79f9e1d15b8ae9758a041400ac47dc7b4612c5ea",
+  "config": {
+    "risk": "liquidity_risk",
+    "features": [
+      "turnover_rate",
+      "trade_volume_to_avg_volume"
+    ],
+    "scale": 0.125,
+    "reps": 2,
+    "entanglement": "linear",
+    "architecture": "risk_specific"
+  },
+  "shape": [
+    180,
+    180
+  ],
+  "elapsed_seconds": 21.122030133381486,
+  "statistics": {
+    "offdiag_mean": 0.7103424441852926,
+    "offdiag_std": 0.27047582923145913,
+    "offdiag_max": 0.9999977670460342,
+    "effective_rank": 2.183451148282054
+  }
+}

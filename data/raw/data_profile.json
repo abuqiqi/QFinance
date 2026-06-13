@@ -1,0 +1,31 @@
+{
+  "sample_count": 600,
+  "missing_values": 0,
+  "label_positive_rates": {
+    "concentration_risk": 0.3466666666666667,
+    "volatility_risk": 0.345,
+    "liquidity_risk": 0.22
+  },
+  "numeric_ranges": {
+    "estimated_amount_ratio": {
+      "min": 0.00948103,
+      "max": 0.62013001
+    },
+    "holding_ratio_after_trade": {
+      "min": 0.02876306,
+      "max": 0.64732812
+    },
+    "volatility_20d": {
+      "min": 0.10022,
+      "max": 0.646084
+    },
+    "abs_return_5d": {
+      "min": 4e-05,
+      "max": 0.276863
+    },
+    "trade_volume_to_avg_volume": {
+      "min": 0.0050126,
+      "max": 0.29939805
+    }
+  }
+}

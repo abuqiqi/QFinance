@@ -1,0 +1,11 @@
+{
+  "seed": 20260613,
+  "sample_count": 600,
+  "train_ratio": 0.7,
+  "validation_ratio": 0.1,
+  "test_ratio": 0.2,
+  "quantum_subset_size": 180,
+  "feature_map_reps": 2,
+  "entanglement": "linear"
+}
+

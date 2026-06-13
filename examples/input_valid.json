@@ -1,0 +1,23 @@
+{
+  "sample_id": "S000001",
+  "user_profile": {
+    "user_id": "U0001",
+    "total_asset": 500000,
+    "cash_available": 300000,
+    "risk_preference": "moderate",
+    "current_stock_position_value": 80000
+  },
+  "trade_plan": {
+    "action": "buy",
+    "stock_code": "600006",
+    "trade_time": "2026-06-08 10:30:00",
+    "volume_lot": 1000,
+    "estimated_price": 5.2
+  },
+  "stock_features": {
+    "volatility_20d": 0.36,
+    "return_5d": 0.12,
+    "avg_volume_20d": 2000000,
+    "turnover_rate": 0.018
+  }
+}

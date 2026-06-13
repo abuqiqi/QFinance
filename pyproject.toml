@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "quantum-risk-classifier"
+version = "0.1.0"
+description = "Reproducible quantum-kernel investment risk classification demo"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "joblib>=1.3,<2",
+  "matplotlib>=3.7,<4",
+  "numpy>=1.24,<3",
+  "pandas>=2.0,<3",
+  "pydantic>=2.6,<3",
+  "qiskit>=1.2,<2",
+  "qiskit-machine-learning>=0.8,<0.9",
+  "scikit-learn>=1.3,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+quantum-risk = "quantum_risk_classifier.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/quantum_risk_classifier"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = ["quantum: tests requiring qiskit quantum-kernel execution"]
+

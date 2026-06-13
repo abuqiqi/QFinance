@@ -1,0 +1,25 @@
+{
+  "sample_id": "S-invalid",
+  "user_profile": {
+    "user_id": "U0001",
+    "total_asset": -1,
+    "cash_available": 300000,
+    "risk_preference": "unknown",
+    "current_stock_position_value": 80000
+  },
+  "trade_plan": {
+    "action": "sell",
+    "market": "NYSE",
+    "stock_code": "ABC",
+    "trade_time": "bad",
+    "volume_lot": 0,
+    "estimated_price": -5
+  },
+  "stock_features": {
+    "volatility_20d": -1,
+    "return_5d": 2,
+    "avg_volume_20d": 0,
+    "turnover_rate": 2
+  }
+}
+

@@ -1,0 +1,38 @@
+{
+  "signature": "be7e32e2e085b108f48e381a90274b240843ff48833a4387169eed78791058d6",
+  "config": {
+    "risk": "concentration_risk",
+    "features": [
+      "estimated_amount_ratio",
+      "holding_ratio_after_trade",
+      "current_position_ratio",
+      "risk_preference_code"
+    ],
+    "scale": 0.125,
+    "reps": 1,
+    "entanglement": "linear",
+    "architecture": "risk_specific",
+    "C": 10.0,
+    "class_weight": null,
+    "threshold": -0.29304785044405907,
+    "cv_f1": 0.992,
+    "cv_roc_auc": 0.9998633132859486,
+    "kernel_statistics": {
+      "offdiag_mean": 0.3336540754666379,
+      "offdiag_std": 0.2934640891824848,
+      "offdiag_max": 0.9999635450418288,
+      "effective_rank": 7.869187931141302
+    }
+  },
+  "shape": [
+    600,
+    600
+  ],
+  "elapsed_seconds": 287.8997232541442,
+  "statistics": {
+    "offdiag_mean": 0.3358943399100763,
+    "offdiag_std": 0.2966108088044293,
+    "offdiag_max": 0.9999808707112819,
+    "effective_rank": 7.941659713178405
+  }
+}
