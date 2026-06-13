@@ -1,0 +1,34 @@
+{
+  "risk": "liquidity_risk",
+  "features": [
+    "turnover_rate",
+    "trade_volume_to_avg_volume"
+  ],
+  "scale": 0.125,
+  "reps": 1,
+  "entanglement": "linear",
+  "architecture": "risk_specific",
+  "C": 10.0,
+  "class_weight": null,
+  "threshold": -0.7357593787365092,
+  "cv_f1": 0.9873417721518988,
+  "cv_roc_auc": 1.0,
+  "kernel_statistics": {
+    "offdiag_mean": 0.7075444626817003,
+    "offdiag_std": 0.2745032619571583,
+    "offdiag_max": 0.9999979167850914,
+    "effective_rank": 2.1782494819308567
+  },
+  "feature_dimension": 2,
+  "num_qubits": 2,
+  "train_size": 480,
+  "test_size": 120,
+  "kernel_seconds": 130.62597121717408,
+  "cache_hit": true,
+  "full_kernel_statistics": {
+    "offdiag_mean": 0.7051889282831922,
+    "offdiag_std": 0.2765741509823197,
+    "offdiag_max": 0.9999986850531397,
+    "effective_rank": 2.2075725244725612
+  }
+}

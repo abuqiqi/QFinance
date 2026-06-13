@@ -1,0 +1,72 @@
+{
+  "sample_id": "S000001",
+  "model_version": "qksvm_demo_v1",
+  "input_summary": {
+    "stock_code": "600006",
+    "action": "buy",
+    "volume_lot": 1000,
+    "volume_share": 100000,
+    "estimated_amount": 520000.0
+  },
+  "risk_scores": {
+    "concentration_risk": 0.8780095434637765,
+    "volatility_risk": 0.5008022137796753,
+    "liquidity_risk": 0.22697724790757517
+  },
+  "risk_labels": {
+    "concentration_risk": 1,
+    "volatility_risk": 1,
+    "liquidity_risk": 0
+  },
+  "overall_risk": {
+    "overall_score": 0.5832289041852907,
+    "overall_level": "medium_high"
+  },
+  "confidence": 0.4345563395572511,
+  "model_outputs": {
+    "classifier_type": "quantum_kernel_svm_optimized",
+    "feature_map": "ZZFeatureMap",
+    "num_qubits": 4,
+    "feature_dimension": 4,
+    "risk_configs": {
+      "concentration_risk": {
+        "features": [
+          "estimated_amount_ratio",
+          "holding_ratio_after_trade",
+          "current_position_ratio",
+          "risk_preference_code"
+        ],
+        "feature_dimension": 4,
+        "reps": 1,
+        "scale": 0.125,
+        "C": 10.0,
+        "class_weight": null,
+        "decision_threshold": -0.29304785044405907
+      },
+      "volatility_risk": {
+        "features": [
+          "volatility_20d",
+          "abs_return_5d"
+        ],
+        "feature_dimension": 2,
+        "reps": 2,
+        "scale": 0.5,
+        "C": 100.0,
+        "class_weight": "balanced",
+        "decision_threshold": 0.08837356238894219
+      },
+      "liquidity_risk": {
+        "features": [
+          "turnover_rate",
+          "trade_volume_to_avg_volume"
+        ],
+        "feature_dimension": 2,
+        "reps": 1,
+        "scale": 0.125,
+        "C": 10.0,
+        "class_weight": null,
+        "decision_threshold": -0.7357593787365092
+      }
+    }
+  }
+}

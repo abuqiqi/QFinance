@@ -1,0 +1,20 @@
+{
+  "model_version": "qksvm_demo_v1",
+  "seed": 20260613,
+  "artifacts": {
+    "metrics_classical.csv": "ready",
+    "metrics_quantum.csv": "ready",
+    "comparison.csv": "ready",
+    "metrics_quantum_full_baseline.csv": "ready",
+    "quantum_search_results.csv": "ready",
+    "metrics_quantum_optimized.csv": "ready",
+    "comparison_full.csv": "ready"
+  },
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.0",
+    "qiskit": "1.4.6",
+    "qiskit-machine-learning": "0.8.4"
+  }
+}
